@@ -6,6 +6,7 @@
 from django.contrib import admin
 
 from container.models import InOutHistory, Camera, WorkerConfig
+
 from web_admin.model_admin.camera import CameraAdmin
 from web_admin.model_admin.io_historys import InOutHistoryAdmin
 from web_admin.model_admin.worker_config import WorkerConfigAdmin

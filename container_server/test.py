@@ -3,15 +3,20 @@
 #  Proprietary and confidential
 #  Written by AI Power, January 2020
 
-import cv2
+# import cv2
+#
+# video = cv2.VideoCapture('rtsp://admin:love2love@192.168.101.50:9001')
+#
+# while 1:
+#     grabbed, frame = video.read()
+#     if not grabbed:
+#         continue
+#
+#     frame = cv2.resize(frame, (640, 360))
+#     cv2.imshow('Camera', frame)
+#     cv2.waitKey(1)
 
-video = cv2.VideoCapture('rtsp://admin:love2love@192.168.101.50:9001')
-
-while 1:
-    grabbed, frame = video.read()
-    if not grabbed:
-        continue
-
-    frame = cv2.resize(frame, (640, 360))
-    cv2.imshow('Camera', frame)
-    cv2.waitKey(1)
+from django.contrib.auth.models import User
+if __name__ == "__main__":
+    user = User.objects.get(id=1)
+    user.check_password('password') # Returns True or False

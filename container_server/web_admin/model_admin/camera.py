@@ -73,6 +73,7 @@ class CameraAdmin(admin.ModelAdmin):
         return choices
 
     def get_urls(self):
+
         urls = super().get_urls()
         extend_urls = [
             re_path(
