@@ -4,8 +4,8 @@
 #  Written by Edward J. C. Ashenbert - Miyuki Nogizaka - Nguyen Quang Binh, May 2020
 import pytesseract
 import cv2
-import os
 import numpy as np
+
 class tesseract_text_recognize():
     def __init__(self):
         pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract.exe'
