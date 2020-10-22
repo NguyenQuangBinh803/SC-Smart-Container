@@ -16,10 +16,9 @@ of the point-spread function.
 import numpy as np
 import matplotlib.pyplot as plt
 import pylops
+import cv2
 
-###############################################################################
-# Let's start by importing a 2d image and defining the blurring operator
-im = np.load('../testdata/python.npy')[::5, ::5, 0]
+im = cv2.imread('Deblur/1582673160672.jpg')
 
 Nz, Nx = im.shape
 

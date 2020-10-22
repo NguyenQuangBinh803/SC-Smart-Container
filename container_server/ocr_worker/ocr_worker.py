@@ -26,6 +26,7 @@ from utils.container_code_util import ContainerCodeUtil
 from utils.static_util import StaticUtil
 
 from ocr_worker.utils.tesseract_recognizer import tesseract_text_recognize
+from ocr_worker.utils.easyocr_recognizer import EasyOCRRecognizer
 SIZE = 416, 416
 CONF_THRESHOLD = 0.5
 IOU_THRESHOLD = 0.4
@@ -68,8 +69,8 @@ def detect(
 def recognize(
         ocr_frame_rgb):
     ocr_frame_rgb = cv2.cvtColor(ocr_frame_rgb, cv2.COLOR_RGB2BGR)
-    tess = tesseract_text_recognize()
-    text = tess.recognize_image(tess.preprocess_image(ocr_frame_rgb))
+    tess = EasyOCRRecognizer()
+    text = tess.recognize_image(ocr_frame_rgb)
 
     return text
 

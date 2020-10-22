@@ -3,3 +3,5 @@
 #  Proprietary and confidential
 #  Written by AI Power, January 2020
 
+def recognize():
+    return None
